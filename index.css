@@ -1,0 +1,241 @@
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+  background: rgb(113,112,112);
+background: linear-gradient(90deg, rgba(113,112,112,1) 0%, rgba(5,5,5,1) 0%, rgba(85,84,84,1) 100%, rgba(216,240,234,1) 100%);
+}
+h1{
+  color: whitesmoke;
+  background: rgb(0,0,79);
+  text-align: center;
+  padding: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: 0;
+  width: 100%;
+  border-bottom: 2px solid black;
+  font-family: 'Roboto Mono', monospace;
+}
+.graph{
+  height: 90%;
+  width: 90%;
+  /*padding: 50px;*/
+  margin: 20px;
+  margin-left: 20px;
+  justify-items: center;
+}
+.do{
+  height: 30%;
+  width: 30%;
+  /*padding: 50px;*/
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
+}
+#portret{
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  text-align: center;
+/*  margin-top: auto;
+  margin-bottom: auto;*/
+  padding: auto;
+  /*vertical-align: middle;*/
+  background-image: url('https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
+}
+#portret_p{
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 30%;
+  padding-bottom: 30%;
+  /*padding: auto;*/
+  /*background-image: url('https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');*/
+}
+.container1{
+  display: grid;
+/*  margin-left: 5px;
+  margin-right: 5px;*/
+  /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) 1fr 1fr);*/
+  grid-template-columns:1fr 1fr;
+}
+.container3{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.container2{
+  display: grid;
+/*  margin-left: 5px;
+  margin-right: 5px;*/
+  /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) 1fr 1fr);*/
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background: rgb(0, 0, 0);
+  color: white;
+  background-image: url('https://images.squarespace-cdn.com/content/v1/59440628b3db2b2f36a66f10/1612628670100-3ZW5HRX4MMQFG7MD75EB/DSC_2629.jpeg?format=2500w');
+}
+.container2:hover{
+  cursor: default;
+}
+.card{
+  /*display: grid;*/
+  cursor:pointer;
+  text-align: center;
+  margin: 3px;
+  border-radius:4px;
+  border:1px solid #bbb;
+  transition: all 0.3s linear;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  vertical-align: middle;
+  box-shadow:rgba(0,0,0,0.05) 0px 5px 5px;
+}
+.card:hover{
+  box-shadow:rgba(0,0,0,0.2) 0px 5px 15px;
+}
+.cardgraph{
+  float: left;
+  height: 50%;
+  width: 50%;
+}
+.cardname{
+  margin-top: 5px;
+}
+#card1{
+  font-size: 1em;
+  background: rgb(206,237,207);
+  background: linear-gradient(90deg, rgba(206,237,207,1) 0%, rgba(216,240,234,1) 100%, rgba(135,234,242,1) 100%);
+}
+#card2{
+  padding-bottom: 15px;
+  background: rgb(206,237,207);
+  background: linear-gradient(90deg, rgba(206,237,207,1) 0%, rgba(216,240,234,1) 100%, rgba(135,234,242,1) 100%);
+}
+h2{
+  text-align: left;
+  margin-left: 10px;
+}
+h3{
+
+}
+.profit1{
+  float: right;
+  font-weight: bold;
+  margin-right: 10px;
+}
+#profit2{
+  font-size: 0.5em;
+  margin-right: 10px;
+  font-weight: normal;
+}
+#card4{
+  align-items: center;
+  height: 200px;
+}
+#card4:hover{
+  background-color: blue;
+  color: white;
+}
+#big4{
+  font-size: 4em;
+  margin: 0;
+  margin-top: 30px;
+}
+#desc{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  color: white;
+  padding-bottom: 25px;
+  vertical-align: middle;
+  background: rgb(113,112,112);
+  background: linear-gradient(90deg, rgba(113,112,112,1) 0%, rgba(5,5,5,1) 0%, rgba(85,84,84,1) 100%, rgba(216,240,234,1) 100%);
+  /*position: absolute;
+  bottom: 25px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  text-align: center;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;*/
+}
+@media only screen and (max-width: 700px){
+  .container2{
+    grid-template-columns: 1fr 1fr;
+  }
+  .container1{
+    grid-template-columns: 1fr;
+  }
+  .container3{
+    grid-template-columns: 1fr;
+  }
+}
+ul {
+  list-style-type: none;
+  background: black;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 8px;
+  margin-bottom: 25px;
+}
+li{
+  cursor:pointer;
+  display: inline;
+  padding: 8px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1em;
+}
+li:hover{
+  background: darkslategrey;
+}
+.b1{
+  background-image: url('https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+  min-height: 500px;
+  margin: 0;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b2{
+  background-image: url('https://image.freepik.com/free-photo/skyscrapers-from-low-angle-view_1359-568.jpg?w=740');
+  min-height: 500px;
+  margin: 0;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#foot{
+  width: 100%;
+  font-family: 'Roboto Mono', monospace;
+  background: rgb(0,0,79);
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 20px;
+  font-size: 0.8em;
+  text-align: center;
+}
+#sector{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  color: #f1f1f1;
+  background-image: url('https://image.freepik.com/free-vector/dark-low-poly-background_1048-7971.jpg?w=740');
+  text-align: center;
+  padding-right: 20px;
+  padding-top: 30%;
+  padding-bottom: 30%;
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}

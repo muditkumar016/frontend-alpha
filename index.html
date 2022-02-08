@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Alpha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Open+Sans&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body>
+    <h1>DIGITAL ALPHA</h1>
+    <ul>
+      <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+      <li><a href="port.html" style="color: white; text-decoration: none;">Portfolio</a></li>
+      <li>Contact</li>
+      <li><a href="#a1" style="color: white; text-decoration: none;">About</a></li>
+    </ul>
+    
+    
+    <div class="container1">
+        <div class= "card" id= "card1">
+            <h2>Portfolio returns<div class= "profit1">244.7% Total   <div id="profit2">17.4% Avg</div></div></h2>
+            <div class= "graph">
+                <canvas id="line1"></canvas>
+            </div>
+        </div>
+        <div id="portret">
+        <p id="portret_p">Our protfolio companies have shown phenomenal return after our supervision and the graph shows it claerly. To know more about our portfolio companies, <a href="port.html" style="color: white; text-decoration: none;">click here</a>.</p>
+        </div>
+    </div>
+    <div class="b1"><p id="desc">Digital Alpha is a technology consulting and solution engineering firm based out of NY, United States. Our engineering capabilities and digital innovation help companies with business transformation and faster decision-making. Digital Alpha will soon commit to making a market sentiment analyzing, easy-to-use, intuitive web and mobile applications for finance professionals. There’s a very wide variety of data and insights that can be shown on the application in different structures on multiple platforms.</p></div>
+    <div class="container3">
+        
+        <p id="sector"><a id="a1"></a>Digital Alpha's portfolio includes companies from a wide variety of sectors and no specific sector is favoured by us. You can come aboard wuth us, no matter which sector you belong to.</p>
+        <div class= "card" id="card2">
+            <h2 style="text-align: center;">Portfolio sectors</h2>
+            <div class= "do">
+                <canvas id="do1"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="b2">
+        <div class="container2">
+            <div class= "card" id="card4" style="cursor:default;">
+                <p id= "big4">2X</p>
+                <p id= "small4">Growth in profit</p>
+            </div>
+            <div class= "card" id="card4" style="cursor:default;">
+                <p id= "big4">45%</p>
+                <p id= "small4">Better customer reach</p>
+            </div>
+            <div class= "card" id="card4" style="cursor:default;">
+                <p id= "big4">3X</p>
+                <p id= "small4">Better clinet feedback</p>
+            </div>
+            <div class= "card" id="card4" style="cursor:default;">
+                <p id= "big4">127</p>
+                <p id= "small4">Clients turned unicorn</p>
+            </div>
+        </div>
+    </div>
+    <p id="foot">© 2022 Digital Alpha Technologies, Inc.</p>
+</body>
+<script>
+    const line1 = document.getElementById('line1').getContext('2d');
+    const myChart1 = new Chart(line1, {
+        type: 'line',
+        data: {
+            labels: ['2016', '2017', '2018', '2019', '2020', '2021'],
+            datasets: [{
+                label: 'Portfolio return %',
+                fill: {
+                    target: 'origin',
+                    above: 'rgba(0, 0, 255, 0.2'
+                },
+                data: [12,34,43,59,81,91],
+                backgroundColor: [
+                    'rgba(0, 0, 255, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(0, 0, 255, 1)',
+                ],
+                display: 0,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            plugins:{   
+             legend: {
+               display: false
+                     
+                  }
+             },
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    grid: {
+                        display: false
+                    },
+                    display:false
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                },
+
+            }
+        }
+    });
+    const do1 = document.getElementById('do1').getContext('2d');
+    const myChart2 = new Chart(do1, {
+        type: 'doughnut',
+        data: {
+            labels: ['Agricultural','Finance','Consultancy','Health'],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [300, 50, 100, 75],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)',
+                    'rgb(0,255,0)'
+                ],
+            hoverOffset: 4
+            }]
+        },
+    });
+</script>
+</html>

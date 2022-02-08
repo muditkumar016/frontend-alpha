@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Alpha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Open+Sans&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="port.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body>
+    <h1>DIGITAL ALPHA</h1>
+    <ul>
+      <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+      <li><a href="port.html" style="color: white; text-decoration: none;">Portfolio</a></li>
+      <li>Contact</li>
+      <li>About</li>
+    </ul>
+    <h2>PORTFOLIO</h2>
+    <p>Digital Alpha has assisted companies to grow their profits and the change is visible. Click on our portfolio companies to see how they were growing before approaching us and how how they grew after.</p>
+    <div class= "container">
+        <div class= "comp" onclick="show1()" draggable=true id='one'>
+            <img src= "logo1.png" class= "comppic">
+            <div class="compn">Eco Focus</div>
+        </div>
+        <div class= "comp" onclick="show2()" draggable=true id='two'>
+            <img src= "logo2.png" class= "comppic">
+            <div class="compn">Innovation Arch</div>
+        </div>
+        <div class= "comp" onclick="show3()" draggable=true id='three'>
+            <img src= "logo3.png" class= "comppic">
+            <div class="compn">Strat Security</div>
+        </div>
+        <div class= "comp" onclick="show4()" draggable=true id='four'>
+            <img src= "logo4.png" class= "comppic">
+            <div class="compn">Inspire Fitness Co</div>
+        </div>
+        <div class= "comp" onclick="show5()" draggable=true id='five'>
+            <img src= "logo5.png" class= "comppic">
+            <div class="compn">Candor Corp</div>
+        </div>
+        <div class= "comp" onclick="show6()" draggable=true id='six'>
+            <img src= "logo6.png" class= "comppic">
+            <div class="compn">Cogent Data</div>
+        </div>
+    </div>
+    <p id= "p2">NA</p>
+    <div class= "graph" id="g">
+        <canvas id="myChart"></canvas>
+    </div>
+    <p id="foot">© 2022 Digital Alpha Technologies, Inc.</p>
+</body>
+<script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['2016', '2017', '2018', '2019', '2020', '2021'],
+            datasets: [{
+                label: 'Profit in M$ with DA',
+                fill: {
+                    target: 'origin',
+                    above: 'rgba(0, 0, 255, 0.2'
+                },
+                data: [],
+                backgroundColor: [
+                    'rgba(0, 0, 255, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(0, 0, 255, 1)',
+                ],
+                display: 0,
+                borderWidth: 1
+            },
+            {
+                label: 'Profit in M$ without DA',
+                fill: {
+                    target: 'origin',
+                    above: 'rgba(148, 153, 150, 0.2)'
+                },
+                data: [0, 0, 0, 0, 0, 0],
+                backgroundColor: [
+                    'rgba(148, 153, 150, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(148, 153, 150, 1)',
+                ],
+                display: 0,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: false,
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                },
+
+            }
+        }
+    });
+    function show1(){
+        myChart.data.datasets[0].data=[54,63,72,83,99,120];
+        myChart.data.datasets[1].data=[50,55,60,65,70,75];
+        document.getElementById('p2').innerHTML="Eco Focus";
+        myChart.update();
+    }
+    function show2(){
+        myChart.data.datasets[0].data=[2,6,12,20,25,33];
+        myChart.data.datasets[1].data=[1,3,5,7,9,11];
+        document.getElementById('p2').innerHTML="Innovation Arch";
+        myChart.update();
+    }
+    function show3(){
+        myChart.data.datasets[0].data=[101,121,125,141,145,159];
+        myChart.data.datasets[1].data=[99,104,109,114,119,124];
+        document.getElementById('p2').innerHTML="Strat Security";
+        myChart.update();
+    }
+    function show4(){
+        myChart.data.datasets[0].data=[21,26,31,34,41,47];
+        myChart.data.datasets[1].data=[18,20,22,24,26,28];
+        document.getElementById('p2').innerHTML="Inspire Fitness Co";
+        myChart.update();
+    }
+    function show5(){
+        myChart.data.datasets[0].data=[76,79,85,83,89,97];
+        myChart.data.datasets[1].data=[73,75,77,79,81,83];
+        document.getElementById('p2').innerHTML="Candor Corp";
+        myChart.update();
+    }
+    function show6(){
+        myChart.data.datasets[0].data=[200,253,273,303,304,309];
+        myChart.data.datasets[1].data=[180,190,200,210,220,230];
+        document.getElementById('p2').innerHTML="Cogent Data";
+        myChart.update();
+    }
+    const one= document.getElementById('one');
+    const two= document.getElementById('two');
+    const three= document.getElementById('three');
+    const four= document.getElementById('four');
+    const five= document.getElementById('five');
+    const six= document.getElementById('six');
+    var k= 0;
+    one.addEventListener('dragstart', ()=>{
+        k=1;
+    })
+    two.addEventListener('dragstart', ()=>{
+        k=2;
+    })
+    three.addEventListener('dragstart', ()=>{
+        k=3;
+    })
+    four.addEventListener('dragstart', ()=>{
+        k=4;
+    })
+    five.addEventListener('dragstart', ()=>{
+        k=5;
+    })
+    six.addEventListener('dragstart', ()=>{
+        k=6;
+    })
+    const g= document.getElementById('g');
+    g.addEventListener('dragover', (e)=>{
+        e.preventDefault();
+    })
+    g.addEventListener('drop', ()=>{
+        if(k===1){
+            myChart.data.datasets[0].data=[54,63,72,83,99,120];
+            myChart.data.datasets[1].data=[50,55,60,65,70,75];
+            document.getElementById('p2').innerHTML="Eco Focus";
+        }
+        else if(k===2){
+            myChart.data.datasets[0].data=[2,6,12,20,25,33];
+            myChart.data.datasets[1].data=[1,3,5,7,9,11];
+            document.getElementById('p2').innerHTML="Innovation Arch";
+        }
+        else if(k===3){
+            myChart.data.datasets[0].data=[101,121,125,141,145,159];
+            myChart.data.datasets[1].data=[99,104,109,114,119,124];
+            document.getElementById('p2').innerHTML="Strat Security";
+        }
+        else if(k===4){
+            myChart.data.datasets[0].data=[21,26,31,34,41,47];
+            myChart.data.datasets[1].data=[18,20,22,24,26,28];
+            document.getElementById('p2').innerHTML="Inspire Fitness Co";
+        }
+        else if(k===5){
+            myChart.data.datasets[0].data=[76,79,85,83,89,97];
+            myChart.data.datasets[1].data=[73,75,77,79,81,83];
+            document.getElementById('p2').innerHTML="Candor Corp";
+        }
+        else if(k===6){
+            myChart.data.datasets[0].data=[200,253,273,303,304,309];
+            myChart.data.datasets[1].data=[180,190,200,210,220,230];
+            document.getElementById('p2').innerHTML="Cogent Data";
+        }
+        myChart.update();
+    })
+</script>
+</html>
