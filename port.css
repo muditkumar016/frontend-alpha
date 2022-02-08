@@ -93,6 +93,8 @@ li:hover{
   background: darkslategrey;
 }
 #foot{
+  position: absolute;
+  bottom: 0px;
   width: 100%;
   font-family: 'Roboto Mono', monospace;
   background: rgb(0,0,79);
